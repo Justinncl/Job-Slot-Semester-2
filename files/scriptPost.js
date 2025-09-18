@@ -1,4 +1,5 @@
 function postClick(){
     alert("Posted successfully")
-    window.location='home.html'
+    window.location='Home.html'
 }
+
