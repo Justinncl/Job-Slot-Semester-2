@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      margin: 0;
+    }
+    .container {
+      background-color: #fff;
+      display: flex;
+      max-width: 768px;
+      flex-direction: column;
+    }
+
+  
+  .search-box{
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    font-size: 14px;
+    width: 290px;
+  }
+        
+  .message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .messages-section {
+    display: flex;
+    gap: 7px;
+    margin: 9px 0 0 11px;
+  }
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top:10px;
+    justify-content: center;
+  }
+  .profile-icon{
+    aspect-ratio: 1;
+    width: 40px;
+  }
+      
+  .profile-img {
+    aspect-ratio: 1;
+    object-position: center;
+    width: 60px;
+    height: 60PX;
+    border-radius: 50%;
+    margin: 10px;
+  }
+  .message-snippet {
+    display: flex;
+    font-size: 13px;
+    color: #000;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0px;
+    left: 0;
+  }
+
+  .message-waktu {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: Inter, sans-serif;
+    margin: 0px;
+    width: 150px;
+  }
+  .contact-name {
+    font-family: Inter, sans-serif;
+    margin: 0px;
+    text-align: start;
+    width: 150px;
+  }
+  .message-detail {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: Inter, sans-serif;
+    margin-top: 7px;
+  }
+  .footer-nav {
+    border-color: rgba(0, 0, 0, 0.5);
+    border-style: solid;
+    border-top-width: 1px;
+    background-color: #fff;
+    display: flex;
+    margin-top: 251px;
+    width: 290px;
+    max-width: 360px;
+    font-size: 12px;
+    color: #000;
+    font-weight: 400;
+    white-space: nowrap;
+    justify-content: space-between;
+    padding: 5px 33px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  .nav-img {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    align-self: center;
+  }
+  .home-img {
+    width: 34px;
+  }
+  .other-nav-img {
+    width: 30px;
+  }
+  .page-message{
+    width: 360px;
+    overflow: hidden;
+  }
+  .top-navBar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    max-width: 360px;
+    width: 360px;
+    padding: 5px 5px;
+    box-shadow: 0px 1px black;
+    gap: 15px;
+  }
+  </style>
+</head>
+<body>
+  <div class="page-message">
+    <nav class="top-navBar">
+      <a href="/AOL_HCI_Kelompok5/File/home.html">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/95293286574cc85283543ba1c2ae3a3b97bf0f63dca0a6241b6269147014a687?apiKey=74c981b52757438d97bdd2bf9e0257b0&" alt="" class="profile-icon" />
+      </a>
+      <input type="search" placeholder="Search" class="search-box" aria-label="Search" />
+    </nav>
+
+    <div class="profile-container">
+      <div class="message-snippet">
+        <img loading="lazy" src="/AOL_HCI_Kelompok5/Assets/rec-user1" class="profile-img" alt="Profile Image 1" />
+        <div class="message">
+          <p class="contact-name">Full Name</p>
+          <p class="message-waktu">Most recent message <span class="time">1d</span></p>
+        </div>
+      </div>
+      <div class="message-snippet">
+        <img loading="lazy" src="/AOL_HCI_Kelompok5/Assets/rec-image2" class="profile-img" alt="Profile Image 1" />
+        <div class="message">
+          <p class="contact-name">Full Name</p>
+          <p class="message-waktu">Most recent message <span class="time">1d</span></p>
+        </div>
+      </div>
+      <div class="message-snippet">
+        <img loading="lazy" src="/AOL_HCI_Kelompok5/Assets/rec-image3" class="profile-img" alt="Profile Image 1" />
+        <div class="message">
+          <p class="contact-name">Samantha</p>
+          <p class="message-waktu">I want to discuss with you..<span class="time">1d</span></p>
+        </div>
+      </div>
+      <div class="message-snippet">
+        <img loading="lazy" src="/AOL_HCI_Kelompok5/Assets/User-1.jpg" class="profile-img" alt="Profile Image 1" />
+        <div class="message">
+          <p class="contact-name">Silver Wolf</p>
+          <p class="message-waktu">I got tyler's profile pic lol <span class="time">1d</span></p>
+        </div>
+      </div>
+    </div>
+      
+
+    </section>
+    <nav class="footer-nav">
+      <div class="nav-item" tabindex="0" role="button" aria-label="Home">
+        <a href="/AOL_HCI_Kelompok5/File/home.html">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8a48903136c41f44d3130c53ec2d024df7cb05f55f906cb961a8284f6f290389?apiKey=74c981b52757438d97bdd2bf9e0257b0&" class="nav-img home-img" alt="Home Icon" />
+        </a>
+        <span>Home</span>
+      </div>
+      <div class="nav-item" tabindex="0" role="button" aria-label="Post">
+        <a href="/AOL_HCI_Kelompok5/File/post.html">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0828b56230034dd6e44078dd0d8ca6196efe7ffbcb37b8d7c8fba0e9a2b6b88a?apiKey=74c981b52757438d97bdd2bf9e0257b0&" class="nav-img other-nav-img" alt="Post Icon" />
+        </a>
+        <span>Post</span>
+      </div>
+      <div class="nav-item" tabindex="0" role="button" aria-label="Messages">
+        <a href="/AOL_HCI_Kelompok5/File/Message.html">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/249ea650f8118df551cb2541641b9d1daa30a9964542e8f8d1ea239cd3fbbb49?apiKey=74c981b52757438d97bdd2bf9e0257b0&" class="nav-img other-nav-img" alt="Messages Icon" />
+        </a>
+        <span>Messages</span>
+      </div>
+    </nav>
+    
+    </section>
+  </div>
+  
+</body>
+</html>

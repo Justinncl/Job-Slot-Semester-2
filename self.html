@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        display: flex;
+        flex-direction: column;
+        background-color: #04ba91;
+        margin: 0;
+        font-family: Inter, sans-serif;
+      }
+      .profile-container {
+        display: flex;
+        max-width: 360px;
+        width: 100%;
+        padding-bottom: 28px;
+        flex-direction: column;
+      }
+      .header {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 17px;
+        font-size: 24px;
+        padding: 8.5px 11px;
+      }
+      .profile-image {
+        aspect-ratio: 1;
+        width: 30px;
+      }
+      .username {
+        font-weight: 400;
+        color: #000;
+        white-space: nowrap;
+        
+      }
+      .header-image {
+        aspect-ratio: 3.23;
+        width: 100%;
+        z-index: 10;
+      }
+      .main-content {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 5px;
+      }
+      .user-info {
+        display: flex;
+        align-items: center;
+        margin-top: -48px;
+        gap: 20px;
+        color: #000;
+        font-weight: 400;
+        justify-content: space-between;
+        z-index: 10;
+      }
+      .avatar {
+        aspect-ratio: 1;
+        width: 100px;
+        border-radius: 50%;
+        align-self: center;
+      }
+      .name {
+        margin-top: 5px;
+        font: 21px Inter, sans-serif;
+      }
+      .bio {
+        margin-top: 8px;
+        font: 16px Inter, sans-serif;
+      }
+      .job-title {
+        margin-top: 70px;
+        font: 14px Inter, sans-serif;
+      }
+      .icon {
+        aspect-ratio: 1;
+        width: 30px;
+        align-self: start;
+        margin-top: 52px;
+      }
+      .address {
+        color: rgba(0, 0, 0, 0.7);
+        margin-top: 6px;
+        font: 400 10px Inter, sans-serif;
+      }
+      .contact-section {
+        display: flex;
+        margin-top: 23px;
+        gap: 10px;
+        font-size: 14px;
+      }
+      .interest {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        border-radius: 20px;
+        background-color: #04ba91;
+        color: #fff;
+        font-weight: 700;
+        padding: 10px 36px;
+        font-family: Inter, sans-serif;
+      }
+      .segments {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        border-radius: 20px;
+        border: 1px solid #04ba91;
+        color: #04ba91;
+        font-weight: 400;
+        padding: 10px 29px;
+        font-family: Inter, sans-serif;
+      }
+      .dot{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: start;
+      }
+      .dot a{
+        display: block;
+        color: black;
+        text-decoration: none;
+        padding: 10px 15px;
+      }
+      .icon-segment {
+        aspect-ratio: 1;
+        width: 30px;
+        margin: auto 0;
+      }
+      .dot .choice{
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 100px;
+        box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+
+      }
+      .dot:hover .choice{
+        display: block;
+      }
+      .dot a:hover{
+        background-color: hsl(0, 0%, 70%);
+      }
+      #ch{
+        display: none;
+      }
+      .more-choices{
+        display: none;
+      }
+      #ch:checked ~ .more-choices{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        background-color: #fefefe;
+        border: 1px solid rgb(158, 158, 158);
+        width: 88.5%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        .options{
+          display: flex;
+          flex-direction: row;
+          img{
+            width: 30px;
+            margin-right: 12px;
+          }
+          font-size: 17px;
+        }
+        .change-acc, .log-out{
+          margin-bottom: 9px;
+          margin-top: 9px;
+        }
+        .cancel{
+          justify-self: center;
+          align-self: center;
+          /*background-color: red;*/
+          padding: 18px 154px;
+          font-weight: 700;
+          color: red;
+        }
+        hr{
+          position: relative;
+          left: -20px;
+          width: 120%;
+        }
+      }
+      .details-section {
+        background-color: #fff;
+        margin-top: 20px;
+        padding: 17px 12px 77px;
+        font: 400 21px Inter, sans-serif;
+        color: #000;
+      }
+    </style>
+</head>
+<body>
+    <section class="profile-container">
+      <header class="header">
+        <a href="home.html">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/95293286574cc85283543ba1c2ae3a3b97bf0f63dca0a6241b6269147014a687?apiKey=74c981b52757438d97bdd2bf9e0257b0&" alt="User profile picture" class="profile-image"/>
+        </a>
+        <div class="username">Username</div>
+      </header>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/521b75dce865721ccf575b148b260869ab07a4dc91e94d31aaa2a4aa1df99730?apiKey=74c981b52757438d97bdd2bf9e0257b0&" alt="Header image" class="header-image"/>
+      <section class="main-content">
+        <div class="user-info">
+          <div class="user-details">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f479cf47e3a17def7b248bfea8d3a3eb1f225c99e87338e3f819f1c9d920c379?apiKey=74c981b52757438d97bdd2bf9e0257b0&" alt="User avatar" class="avatar"/>
+            <div class="name">Full Name</div>
+            <div class="bioUser Bio">User Bio</div>
+            <div class="job-title">Current Job</div>
+          </div>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d47e81d95dca7a3558932ac37cd090d03a0a53ae011bb5bafae2a2bda9550d1d?apiKey=74c981b52757438d97bdd2bf9e0257b0&" alt="Icon" class="icon"/>
+        </div>
+        <div class="address">Current Address</div>
+        <div class="contact-section">
+          <div class="interest">Looking for</div>
+          <div class="segments">Add segments</div>
+             <div class="dot">
+              <input type="checkbox" name="" id="ch">
+              <label for="ch">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9acaf5449914205aef4fbf41739938b08566af36e48d94ca6d08583b18f0ce3?apiKey=74c981b52757438d97bdd2bf9e0257b0&" alt="Icon" class="icon-segment"/>
+              </label>
+              <div class="more-choices">
+                <div class="options change-acc">
+                  <img src="/AOL_HCI_Kelompok5/Assets/swap-account-icon.png" alt="share-icon">
+                  <div class="optText">
+                    Swap account
+                  </div>
+                </div><hr>
+                <div class="options log-out">
+                  <img src="/AOL_HCI_Kelompok5/Assets/log-out-icon.png" alt="share-icon">
+                  <div class="optText">
+                    Log out
+                  </div>
+                </div><hr>
+                <div class="options cancel">
+                  <label for="ch">Cancel</label>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="details-section">Experience</section>
+      <section class="details-section">Interests</section>
+      <section class="details-section">Posts</section>
+    </section>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <title>JobSlot Registration</title>
+    <style>
+        .main-container {
+            background-color: #fff;
+            display: flex;
+            max-width: 100%;
+            flex-direction: column;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.7);
+            font-weight: 400;
+            padding: 46px 13px;
+            box-sizing: border-box;
+        }
+
+        .main-title {
+            color: #04ba91;
+            font: 700 16px 'Inter', sans-serif;
+        }
+
+        .form-title {
+            color: #000;
+            margin-top: 37px;
+            font: 700 24px 'Inter', sans-serif;
+        }
+
+        .form-label {
+            font-family: 'Inter', sans-serif;
+            margin-top: 23px;
+        }
+
+        .input-box {
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.667);
+            margin-top: 4px;
+            height: 42px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .dob-container {
+            display: flex;
+            margin-top: 4px;
+            gap: 0px;
+            color: rgba(0, 0, 0, 0.67);
+            white-space: nowrap;
+        }
+
+        .dob-box {
+            font-family: 'Inter', sans-serif;
+            justify-content: center;
+            border-top: 1px solid rgba(0, 0, 0, 0.667);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.667);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .dob-dd {
+            border-left: 1px solid rgba(0, 0, 0, 0.667);
+            border-radius: 5px 0 0 5px;
+            width: 33.33%;
+        }
+
+        .dob-mm {
+            border-left: none;
+            width: 33.34%;
+        }
+
+        .dob-yyyy {
+            border-left: none;
+            border-right: 1px solid rgba(0, 0, 0, 0.667);
+            border-radius: 0 5px 5px 0;
+            width: 33.33%;
+        }
+
+        .register{
+            margin-left: 10px;
+            padding-left: 4px;
+        }
+        .register a{
+            list-style: none;
+            text-decoration: none;
+        }
+        .terms-container {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+            margin-left: 10px;
+            gap: 10px;
+            color: #000;
+        }
+
+        .checkbox {
+            border: 1px solid rgba(0, 0, 0, 1);
+            width: 15px;
+            height: 15px;
+        }
+
+        .terms-text {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .terms-link {
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .submit-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 24px;
+            background-color: #04ba91;
+            margin-top: 17px;
+            color: #fff;
+            padding: 10px;
+            font: 700 18px 'Inter', sans-serif;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        @media (min-width: 768px) {
+            .main-container {
+                max-width: 360px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main-container">
+        <header class="main-title">JobSlot</header>
+        <h1 class="form-title">Join JobSlot</h1>
+        <form>
+            <label for="firstname" class="form-label">First Name*</label>
+            <input type="text" id="firstname" class="input-box" aria-label="First Name" />
+            <label for="lastname" class="form-label" style="margin-top: 12px;">Last Name*</label>
+            <input type="text" id="lastname" class="input-box" aria-label="Last Name" />
+            <label for="password" class="form-label" style="margin-top: 12px;">Password*</label>
+            <input type="password" id="password" class="input-box" aria-label="Password" />
+            <label for="email" class="form-label" style="margin-top: 12px;">Email or Phone*</label>
+            <input type="email" id="email" class="input-box" aria-label="Email or Phone" />
+            <label for="dob" class="form-label" style="margin-top: 12px;">Date of Birth*</label>
+            <div class="dob-container" id="dob">
+                <input type="text" id="dob-day" class="dob-box dob-dd" aria-label="Date of Birth Day" placeholder="DD" />
+                <input type="text" id="dob-month" class="dob-box dob-mm" aria-label="Date of Birth Month" placeholder="MM" />
+                <input type="text" id="dob-year" class="dob-box dob-yyyy" aria-label="Date of Birth Year" placeholder="YYYY" />
+            </div>
+            <div class="terms-container">
+                <input type="checkbox" id="terms" class="checkbox" />
+                <label for="terms" class="terms-text"> I agree to the <span class="terms-link">Terms of Use</span> and <span class="terms-link">Privacy Policy</span> </label>
+            </div>
+        </form>
+        <div class="register">
+            <a href="/AOL_HCI_Kelompok5/File/Login.html">Already have an account? Login</a>
+        </div>
+        <a href="/AOL_HCI_Kelompok5/File/home.html">
+            <button type="submit" class="submit-button">Create Account</button>
+        </a>
+    </section>
+</body>
+
+</html>

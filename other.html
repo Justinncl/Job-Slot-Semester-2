@@ -1,0 +1,356 @@
+<!-- Done -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        display: flex;
+        flex-direction: column;
+        background-color: #04ba91;
+        margin: 0;
+        font-family: Inter, sans-serif;
+      }
+      .profile-container {
+        display: flex;
+        max-width: 360px;
+        width: 100%;
+        padding-bottom: 28px;
+        flex-direction: column;
+      }
+      .header {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 17px;
+        font-size: 24px;
+        padding: 8.5px 11px;
+      }
+      .profile-image {
+        aspect-ratio: 1;
+        width: 30px;
+      }
+      .username {
+        font-weight: 400;
+        color: #000;
+        white-space: nowrap;
+        
+      }
+      .header-image {
+        aspect-ratio: 3.23;
+        width: 100%;
+        z-index: 10;
+      }
+      .main-content {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 5px;
+      }
+      .user-info {
+        display: flex;
+        align-items: center;
+        margin-top: -48px;
+        gap: 20px;
+        color: #000;
+        font-weight: 400;
+        justify-content: space-between;
+        z-index: 10;
+      }
+      .avatar {
+        aspect-ratio: 1;
+        width: 100px;
+        border-radius: 50%;
+        align-self: center;
+      }
+      .name {
+        margin-top: 5px;
+        font: 21px Inter, sans-serif;
+      }
+      .bio {
+        margin-top: 8px;
+        font: 16px Inter, sans-serif;
+      }
+      .job-title {
+        margin-top: 70px;
+        font: 14px Inter, sans-serif;
+      }
+      .icon {
+        aspect-ratio: 1;
+        width: 30px;
+        align-self: start;
+        margin-top: 52px;
+      }
+      .address {
+        color: rgba(0, 0, 0, 0.7);
+        margin-top: 6px;
+        font: 400 10px Inter, sans-serif;
+      }
+      .other-actions {
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        margin-right: 5px;
+        position: absolute;
+        top:170px;
+        right: 5px;
+      }
+      .message-button {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        border-radius: 20px;
+        border: 1px solid #000;
+        background-color: #fff;
+        color: #000;
+        font-weight: 400;
+        padding: 10px 18px;
+        font-family: Inter, sans-serif;
+      }
+      .follow-button {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        border-radius: 20px;
+        border: 1px solid #000;
+        background-color: #fff;
+        color: #000;
+        font-weight: 400;
+        padding: 10px 24px;
+        font-family: Inter, sans-serif;
+      }
+      .icon-segment {
+        aspect-ratio: 1;
+        width: 34px;
+      }
+      .details-section {
+        background-color: #fff;
+        margin-top: 20px;
+        padding: 17px 12px 77px;
+        font: 400 21px Inter, sans-serif;
+        color: #000;
+      }
+      
+      .recommended{
+        background-color: white;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: -5px;
+        hr{
+            width: 90%;
+        }
+    }
+    
+    .recImg img{
+        aspect-ratio: 1;
+        width: 55px;
+        clip-path: circle();
+    }
+    
+    .recProfile{
+        display: flex;
+        align-items: center;
+        padding: 0px 12px;
+    }
+    .dot{
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: start;
+    }
+    .dot a{
+      display: block;
+      color: black;
+      text-decoration: none;
+      padding: 10px 15px;
+    }
+    .dot .choice{
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 100px;
+      box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+
+    }
+    .dot:hover .choice{
+      display: block;
+    }
+    .dot a:hover{
+      background-color: hsl(0, 0%, 70%);
+    }
+
+    .profile-summary{
+            li{
+                text-decoration: none;
+                list-style-type: none;
+            }
+            .ujob, .postTime{
+                font-size: 12px;
+            }
+    }
+
+    #ch{
+      display: none;
+    }
+    .more-choices{
+      display: none;
+    }
+    #ch:checked ~ .more-choices{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      background-color: #fefefe;
+      border: 1px solid rgb(158, 158, 158);
+      width: 89%;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 15px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      .options{
+        display: flex;
+        flex-direction: row;
+        img{
+          width: 30px;
+          margin-right: 12px;
+        }
+        font-size: 17px;
+      }
+      .share-profile, .report-or-block{
+        margin-bottom: 9px;
+        margin-top: 9px;
+      }
+      .mute{
+        margin-top: 9px;
+        margin-bottom: 9px;
+      }
+      .cancel{
+        justify-self: center;
+        align-self: center;
+        /*background-color: red;*/
+        padding: 18px 154px;
+        font-weight: 700;
+        color: red;
+      }
+      hr{
+        position: relative;
+        left: -20px;
+        width: 120%;
+      }
+    }
+
+    </style>
+</head>
+<body>
+    <section class="profile-container">
+      <header class="header">
+        <a href="home.html">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/95293286574cc85283543ba1c2ae3a3b97bf0f63dca0a6241b6269147014a687?apiKey=74c981b52757438d97bdd2bf9e0257b0&" alt="User profile picture" class="profile-image"/>
+        </a>
+        <div class="username">Username</div>
+      </header>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/521b75dce865721ccf575b148b260869ab07a4dc91e94d31aaa2a4aa1df99730?apiKey=74c981b52757438d97bdd2bf9e0257b0&" alt="Header image" class="header-image"/>
+      <section class="main-content">
+        <div class="user-info">
+          <div class="user-details">
+            <img src="/AOL_HCI_Kelompok5/Assets/rec-user1" alt="User avatar" class="avatar"/>
+            <div class="name">Adam</div>
+            <div class="bioUser Bio">Hello there, binus graduate, broke af</div>
+            <div class="job-title">Looking for job</div>
+          </div>
+          <div class="other-actions">
+            <div class="dot">
+              <input type="checkbox" name="" id="ch">
+              <label for="ch">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9acaf5449914205aef4fbf41739938b08566af36e48d94ca6d08583b18f0ce3?apiKey=74c981b52757438d97bdd2bf9e0257b0&" alt="Icon" class="icon-segment"/>
+              </label>
+              <div class="more-choices">
+                <div class="options share-profile">
+                  <img src="/AOL_HCI_Kelompok5/Assets/share-icon.png" alt="share-icon">
+                  <div class="optText">
+                    Share profile
+                  </div>
+                </div><hr>
+                <div class="options report-or-block">
+                  <img src="/AOL_HCI_Kelompok5/Assets/report-block-icon.png" alt="share-icon">
+                  <div class="optText">
+                    Report or Block
+                  </div>
+                </div><hr>
+                <div class="options mute">
+                  <img src="/AOL_HCI_Kelompok5/Assets/silence-icon.png" alt="share-icon">
+                  <div class="optText">
+                    Mute account
+                  </div>
+                </div><hr>
+                <div class="options cancel">
+                  <label for="ch">Cancel</label>
+                </div>
+              </div>
+            </div>
+            <div class="message-button">Message</div>
+            <div class="follow-button">Follow</div>
+          </div>
+        </div>
+        <div class="address">Current Address</div>
+      </section>
+      <section class="details-section">Experience <br><span style="font-size: 13px;">-Working as dish washer at chick-fil-a <br>-Working as a cook in a family restaurant <br>-Self taught cook</span></section>
+      <section class="details-section">Interests <br><span style="font-size: 13px;">-Cooking <br>-Playing League of Legend</span></section>
+      <section class="details-section">Posts <br><span style="font-size: 13px; color: #b9b9b9;">No Post here</span></section>
+    </section>
+    <section class="recommended">
+      <p class="Recommended-header">Recommended for you</p>
+      <div class="recProfile rec-1">
+          <a href="/AOL_HCI_Kelompok5/File/other.html">
+              <div class="recImg img1">
+                  <img src="/AOL_HCI_Kelompok5/Assets/User-1.jpg" alt="">
+              </div>
+          </a>
+          <div class="profile-summary info1">
+              <ul>
+                  <li><span class="uname">Tyler</span></li>
+                  <li><span class="ujob">Content creator</span></li>
+                  <li><span class="postTime">Love LOL, 5m subs on youtube, Love cat</span></li>
+              </ul>
+          </div>
+      </div><hr>
+      <div class="recProfile rec-2">
+          <a href="/AOL_HCI_Kelompok5/File/other.html">
+              <div class="recImg img1">
+                  <img src="/AOL_HCI_Kelompok5/Assets/rec-image2" alt="">
+              </div>
+          </a>
+          <div class="profile-summary info2">
+              <ul>
+                  <li><span class="uname">Carlson</span></li>
+                  <li><span class="ujob">College student</span></li>
+                  <li><span class="postTime">Looking for a part time...</span></li>
+              </ul>
+          </div>
+      </div><hr>
+      <div class="recProfile rec-3">
+          <a href="/AOL_HCI_Kelompok5/File/other.html">
+              <div class="recImg img3">
+                  <img src="/AOL_HCI_Kelompok5/Assets/rec-image3" alt="">
+              </div>
+          </a>
+          <div class="profile-summary info3">
+              <ul>
+                  <li><span class="uname">Samantha</span></li>
+                  <li><span class="ujob">Accountant</span></li>
+                  <li><span class="postTime">I'm currently working as...</span></li>
+              </ul>
+          </div>
+      </div>
+  </section>
+</body>
+</html>
